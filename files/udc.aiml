@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+  <category>
+      <pattern>WHERE IS *</pattern>
+      <template>
+          <think><set name = "state"><star /></set></think>
+          <condition name = "state" value = "Germany">Germany is in Europe.</condition>
+          <condition name = "state" value = "Italy">Italy is in Europe.</condition>
+          <condition name = "state" value = "Spain">Spain is in Europe.</condition>
+          <condition name = "state" value = "Brazil">Brazil is in South America.</condition>
+          <condition name = "state" value = "Argentina">Argentina is in South America.</condition>
+          <condition name = "state" value = "China">China is in Asia.</condition>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>LETS TALK ABOUT CATS</pattern>
+      <template>
+          <think><set name = "topic">cats</set></think>
+          yes let's discuss about cats!
+      </template>
+  </category>
+  
+  <topic name="cats">
+      <category>
+          <pattern>WHAT DO THEY LOOK LIKE</pattern>
+          <template>Little furry things</template>
+      </category>
+  </topic>
+  
+  <category>
+    <pattern>WHAT IS YOUR NAME</pattern>
+    <template>My name is BretelloBot!</template>
+  </category>
+  
+  <category>
+    <pattern>THANKS</pattern>
+    <template>You're welcome!</template>
+  </category>
+  
+  <category>
+    <pattern>BYE</pattern>
+    <template>Goodbye!</template>
+  </category>
+  
+  <category>
+    <pattern>WHAT IS AIML</pattern>
+    <template>Artificial Intelligence Modelling Language</template>
+  </category>
+  
+  <category>
+    <pattern>TELL ME WHAT * IS</pattern>
+    <template><srai>WHAT IS <star/></srai></template>
+  </category>
+  
+  <category>
+      <pattern>TELL ME MORE</pattern>
+      <template>There is not much else to say</template>
+  </category>
+  
+  <category>
+      <pattern>HOW ARE YOU</pattern>
+      <template>I'm good, thanks. </template>
+  </category>
+  
+   <category>
+      <pattern>HELLO</pattern>
+      <template>Hi! </template>
+  </category>
+  
+  <category>
+      <pattern>WHAT DO YOU THINK ABOUT CROTONE</pattern>
+      <template>I think that Crotone is a beautiful city!</template>
+  </category>
+  
+  
+  <category>
+  <pattern>PICK A NUMBER</pattern>
+  <template>
+      <random>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+      </random>
+  </template>
+  </category>
+  
+  <category>
+      <pattern>MY NAME IS *</pattern>
+      <template>Hi <set name = "username"><star /></set></template>
+  </category>
+  
+    <category>
+      <pattern>WHAT IS MY NAME</pattern>
+      <template>Your name is <get name = "username" /></template>
+  </category>
+  
+</aiml>
